@@ -36,11 +36,15 @@ print(good)
 # 9.2
 
 def get_odds():
-  odds = []
-  for i in range(10):
-    if i%2 != 0:
-      odds.append(i)
-  return odds
+  for num in range(1, 10, 2):
+    yield num
+
+count = 0
+for num in get_odd():
+  count += 1
+  if count == 3:
+    print("3rd odd number": num)
+    break
 
 
 list2 = []
